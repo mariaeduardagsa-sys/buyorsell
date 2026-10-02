@@ -13,3 +13,7 @@ class Asset:
     symbol: str
     name: str
     asset_type: AssetType
+
+    def __post_init__(self) -> None:
+        if not self.symbol.strip():
+            raise ValueError("O símbolo do ativo não pode ser vazio.")
