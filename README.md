@@ -161,8 +161,17 @@ Execute:
 uv run python -m app.main
 ```
 
-A demonstração usa um ativo fictício e preços de exemplo.
-Compara o último fechamento com a média dos últimos três
-candles e apresenta o estado da estratégia com seu motivo.
+Informe os fechamentos do mais antigo ao mais recente,
+separados por espaços e usando ponto decimal.
+
+Exemplo: `10.50 11.50 12.50`.
+
+São necessários pelo menos três preços, todos finitos e
+maiores que zero. Entradas inválidas são informadas no terminal.
+
+O ativo, os horários e os demais campos dos candles são fictícios.
+
+A análise compara o último fechamento com a média dos últimos
+três candles e apresenta o estado da estratégia com seu motivo.
 
 Essa regra é didática e ainda não foi avaliada em dados históricos.
