@@ -138,3 +138,31 @@ uv run ruff check .
 uv run ruff format --check .
 uv run mypy app
 ```
+
+## Propósito do produto
+
+O Buy or Sell acompanha ativos, analisa dados de mercado e
+apresenta avisos de possíveis oportunidades com seus motivos.
+O usuário decide se deseja agir. O MVP não envia ordens nem
+executa compras ou vendas.
+
+BUY, HOLD e SELL representam estados das estratégias.
+Uma alta de preço não significa automaticamente uma
+oportunidade de compra.
+
+O acompanhamento de posições e a estimativa de ganho ou perda
+ficam para uma etapa futura.
+
+## Demonstração no terminal
+
+Execute:
+
+```powershell
+uv run python -m app.main
+```
+
+A demonstração usa um ativo fictício e preços de exemplo.
+Compara o último fechamento com a média dos últimos três
+candles e apresenta o estado da estratégia com seu motivo.
+
+Essa regra é didática e ainda não foi avaliada em dados históricos.
